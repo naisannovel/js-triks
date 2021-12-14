@@ -42,3 +42,18 @@ console.log(ary3);  // [1, 2, 3, 4, 5, 6, 7]
 const ary4 = [1, 2, [3, 4, [5, 6, 7], 8], 9];
 const ary5 = ary4.flat(Infinity)
 console.log(ary5);  // [1, 2, 3, 4, 5, 6, 7]
+
+
+// know performance of a task -------------
+
+const { performance } = require('perf_hooks');
+
+const startTime = performance.now();
+
+for(let i = 1; i <= 50; i++){
+    console.log(i);
+}
+
+const endTime = performance.now();
+
+console.log(`time = ${endTime - startTime} milliseconds`);  // time = 16.55579999089241 milliseconds
